@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Optimizer by Dennie{% endblock %}
+
+{% block content %}
+
+    <br />
+    <form method="POST" action="/report">
+    <h3 align="center">Timings Report</h3>
+    <div class="form-group">
+        <label for="timings">Report Link</label>
+        <input
+            type="url"
+            class="form-control"
+            id="timings"
+            name="timings"
+            placeholder="Timings URL"
+        />
+    </div>
+    <button type="submit" class="btn btn-primary">Optimize!</button>
+    </form>
+
+{% endblock %}

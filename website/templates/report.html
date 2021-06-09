@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Optimizer by Dennie{% endblock %}
+
+{% block content %}
+
+    <br />
+    <h3 align="center">Analyzed Timings Report</h3>
+
+    <div class="row g-3">
+        {% for value in return_list %}
+            <div class="col">
+                <div class="card" style="text-align: center;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ value['title'] }}</h5>
+                    <p class="card-text">{{ value['body'] }}</p>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
