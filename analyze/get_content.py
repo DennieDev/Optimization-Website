@@ -21,6 +21,6 @@ async def get_content(timings_url):
         invalid = "Invalid report, Create a new timings report."
         return
 
-    return_object = ReturnValue(request, request_raw)
+    return_object = ReturnValue(request_raw, request)
 
     return return_object
