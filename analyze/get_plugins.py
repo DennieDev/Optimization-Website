@@ -97,10 +97,10 @@ def eval_field(option, option_name, plugins, server_properties, bukkit, spigot, 
                     break
             if add_to_field:
                 """ f strings don't like newlines so we replace the newlines with placeholder text before we eval """
-                option_data["value"] = eval('f"""' + option_data["value"].replace("\n", "\\|n\\") + '"""').replace(
-                    "\\|n\\", "\n")
+                # option_data["value"] = eval('f"""' + option_data["value"].replace("\n", "\\|n\\") + '"""').replace(
+                #     "\\|n\\", "\n")
                 analyze.return_list.append({
-                    'title': f'Name: {option_name}',
+                    'title': f'{option_name}',
                     'body': f'{option_data["value"]}'
                 })
                 break

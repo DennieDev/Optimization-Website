@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, flash
-from analyze import analyze_url
+from analyze import analyze_url, get_tps_color
 
 views = Blueprint('views', __name__)
 
@@ -30,7 +30,8 @@ def report():
                 url = url.split("#")[0]
 
             return_list = analyze_url(url)
+            tps_list = get_tps_color()
 
-            return render_template("report.html", return_list=return_list)
+            return render_template("report.html", return_list=return_list, tps_list=tps_list)
 
     return render_template("home.html")

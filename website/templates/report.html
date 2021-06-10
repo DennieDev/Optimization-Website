@@ -6,14 +6,19 @@
 
     <br />
     <h3 align="center">Analyzed Timings Report</h3>
-
+    <p align="center" style="color: rgb{{ tps_list[1] }} !important;">TPS {{ tps_list[0] }}</p>
+    <br />
     <div class="row g-3">
         {% for value in return_list %}
-            <div class="col">
+            <div class="col-4 mb-3">
                 <div class="card" style="text-align: center;">
                   <div class="card-body">
                     <h5 class="card-title">{{ value['title'] }}</h5>
-                    <p class="card-text">{{ value['body'] }}</p>
+                    <p class="card-text">
+                        {% for row in value['body'].split("\n") %}
+                            {{ row }} <br />
+                        {% endfor %}
+                    </p>
                   </div>
                 </div>
             </div>

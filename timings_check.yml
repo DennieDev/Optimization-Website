@@ -15,7 +15,7 @@ jars:
   - name: "Paper"
     prefix: "×"
     value: |-
-      Purpur has more optimizations. Consider using [Purpur](https://ci.pl3x.net/job/Purpur/).
+      Purpur has more optimizations\nConsider using [Purpur](https://ci.pl3x.net/job/Purpur/).
 plugins:
   paper:
     ClearLag:
@@ -157,7 +157,7 @@ config:
           - int(server_properties["network-compression-threshold"]) <= 256
           - spigot["settings"]["bungeecord"] == "false"
         prefix: "×"
-        value: "Increase this in server.properties. Recommended: 512."
+        value: "Increase this in server.properties\nRecommended: 512."
   bukkit:
     chunk-gc.period-in-ticks:
       - expressions:
@@ -406,22 +406,22 @@ config:
       - expressions:
           - int(paper["world-settings"]["default"]["entity-per-chunk-save-limit"]["experience_orb"]) == -1
         prefix: "×"
-        value: "Set a value in paper.yml. Recommended: 16."
+        value: "Set a value in paper.yml.\nRecommended: 16."
     entity-per-chunk-save-limit.snowball:
       - expressions:
           - int(paper["world-settings"]["default"]["entity-per-chunk-save-limit"]["snowball"]) == -1
         prefix: "×"
-        value: "Set a value in paper.yml. Recommended: 16."
+        value: "Set a value in paper.yml\nRecommended: 16."
     entity-per-chunk-save-limit.ender_pearl:
       - expressions:
           - int(paper["world-settings"]["default"]["entity-per-chunk-save-limit"]["ender_pearl"]) == -1
         prefix: "×"
-        value: "Set a value in paper.yml. Recommended: 16."
+        value: "Set a value in paper.yml\nRecommended: 16."
     entity-per-chunk-save-limit.arrow:
       - expressions:
           - int(paper["world-settings"]["default"]["entity-per-chunk-save-limit"]["arrow"]) == -1
         prefix: "×"
-        value: "Set a value in paper.yml. Recommended: 16."
+        value: "Set a value in paper.yml\nRecommended: 16."
   purpur:
     settings.use-alternate-keepalive:
       - expressions:
@@ -433,7 +433,7 @@ config:
           - purpur["settings"]["use-alternate-keepalive"] == "true"
           - '"TCPShield" in plugins'
         prefix: "×"
-        value: "Disable this in purpur.yml. It can cause issues with TCPShield"
+        value: "Disable this in purpur.yml\nIt can cause issues with TCPShield"
     settings.dont-send-useless-entity-packets:
       - expressions:
           - purpur["settings"]["dont-send-useless-entity-packets"] == "false"

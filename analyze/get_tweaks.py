@@ -17,14 +17,14 @@ def get_tweaks(request, request_raw):
                     if spigot["world-settings"]["default"]["view-distance"] == "default":
                         analyze.return_list.append({
                             'title': 'no-tick-view-distance',
-                            'body': f'Set in paper.yml. Recommended: {tvd}. '
-                                    f'And reduce view-distance from default ({tvd}) in spigot.yml. Recommended: 4. " '
+                            'body': f'Set in paper.yml.\nRecommended: {tvd}.\n'
+                                    f'And reduce view-distance from default ({tvd}) in spigot.yml.\nRecommended: 4. " '
                         })
                     else:
                         analyze.return_list.append({
                             'title': 'no-tick-view-distance',
-                            'body': f'Set in paper.yml. Recommended: {tvd}. '
-                                    f'And reduce view-distance from {tvd} in spigot.yml. Recommended: 4. " '
+                            'body': f'Set in paper.yml.\nRecommended: {tvd}.\n'
+                                    f'And reduce view-distance from {tvd} in spigot.yml.\nRecommended: 4. " '
                         })
                     break
     except KeyError as key:

@@ -20,8 +20,8 @@ def get_tps(request):
         else:
             red = int(255 * (-0.1 * worst_tps + 2))
             green = 255
-        color = int(red * 256 * 256 + green * 256)
-        analyze.tps_color = color
+        color = (red, green, 0)
+        analyze.tps = [round(worst_tps, 2), color]
 
     except KeyError as key:
         logging.info("Missing: " + str(key))

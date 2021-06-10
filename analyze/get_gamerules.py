@@ -13,7 +13,7 @@ def get_gamerules(request_raw):
         if high_mec:
             analyze.return_list.append({
                 'title': 'maxEntityCramming',
-                'body': 'Decrease this by running the /gamerule command in each world. Recommended: 8.'
+                'body': 'Decrease this by running the /gamerule command in each world.\nRecommended: 8.'
             })
 
     except KeyError as key:

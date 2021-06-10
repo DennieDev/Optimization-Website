@@ -16,12 +16,13 @@ from .get_gamerules import get_gamerules
 from .get_tps import get_tps
 
 return_list = []
-tps_color = 0
+tps = []
 
 
 def analyze_url(timings_url):
     # Clear Values
     return_list.clear()
+    tps.clear()
 
     # Loop for asyncio functions
     loop = asyncio.new_event_loop()
@@ -61,3 +62,7 @@ def analyze_url(timings_url):
         })
 
     return return_list
+
+
+def get_tps_color():
+    return tps
